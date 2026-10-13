@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Notice</title>
+<!--
+  ============================================================
+  SIMULATED PHISHING — TRAINING EXERCISE ONLY
+  ============================================================
+  This page is part of a classroom threat-modelling activity.
+  It does NOT imitate any real organisation and collects no
+  personal data entered by the visitor. Its only job is to:
+    1. record that the link was clicked (via the tracker below), and
+    2. reveal to the visitor that they clicked a simulated phish.
+
+  ------------------------------------------------------------
+  STUDENT: FILL IN THESE THREE THINGS
+  ------------------------------------------------------------
+  1. YOUR NAME / TOKEN LABEL  -> search for "STUDENT-NAME" below
+  2. YOUR CANARYTOKEN URL     -> search for "PASTE-TOKEN-HERE" below
+  3. YOUR "RED FLAGS" list    -> edit the <li> items near the bottom
+  ============================================================
+-->
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a2029;
+    --ink: #e8edf2;
+    --muted: #9aa7b4;
+    --accent: #ffb020;    /* warning amber, not a brand colour */
+    --line: #2a333f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  .card {
+    width: 100%;
+    max-width: 620px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 32px 28px;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #241a00;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 { font-size: 1.6rem; margin: 0 0 12px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 10px; color: var(--accent); }
+  p  { margin: 0 0 14px; color: var(--ink); }
+  .muted { color: var(--muted); font-size: 0.92rem; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .divider { height: 1px; background: var(--line); margin: 26px 0; border: 0; }
+  .footer { font-size: 0.82rem; color: var(--muted); }
+</style>
+</head>
+<body>
+  <main class="card">
+
+    <span class="badge">⚠ Simulated phishing — training exercise</span>
+
+    <h1>Gotcha. This was a fake.</h1>
+
+    <p>
+      You just clicked a link in a <strong>simulated phishing email</strong> created
+      for a school cybersecurity lesson. Nothing bad has happened — but if this had
+      been a real attack, clicking could have been the first step to a compromised
+      account.
+    </p>
+
+    <p class="muted">
+      Simulated attack by: <strong>STUDENT-NAME</strong>
+    </p>
+
+    <hr class="divider">
+
+    <h2>What gave it away?</h2>
+    <!-- STUDENT: edit these to match the specific lure email you wrote. -->
+    <ul>
+      <li>The sender's address didn't match the real organisation's domain.</li>
+      <li>It created false urgency ("your account will be closed in 24 hours").</li>
+      <li>The link text and the actual destination were different.</li>
+      <li>It asked you to log in or confirm details via a link, not the real site.</li>
+    </ul>
+
+    <h2>What to do with a real one</h2>
+    <ul>
+      <li>Don't click. Hover first and check where the link actually goes.</li>
+      <li>Go to the real site directly instead of using the email's link.</li>
+      <li>Report it to your IT team or use the "report phishing" button.</li>
+    </ul>
+
+    <hr class="divider">
+
+    <p class="footer">
+      This page is a classroom training exercise and is not affiliated with any
+      real company. It records only that the link was opened (time, approximate
+      IP, and browser type) for the lesson debrief.
+    </p>
+
+    <!--
+      ============================================================
+      THE TRACKER  (this is the part that records the click)
+      ============================================================
+      1. Go to canarytokens.org
+      2. Choose the token type "Web bug / URL token"
+      3. Enter YOUR email + a note (e.g. your name) and create it
+      4. Copy the image URL it gives you
+      5. Paste that URL in place of PASTE-TOKEN-HERE below
+
+      The image is invisible (1x1). When this page loads, the
+      browser fetches it, and Canarytokens logs the time, IP and
+      user-agent — and emails you if you enabled alerts.
+    -->
+    <img src="PASTE-TOKEN-HERE"
+         alt=""
+         width="1" height="1"
+         style="position:absolute; left:-9999px;"
+         aria-hidden="true">
+
+    <!--
+      ALTERNATIVE TRACKER (GoatCounter) — if you'd rather have a
+      counts dashboard than per-click emails, delete the <img> above,
+      sign up at goatcounter.com, and paste the script tag it gives
+      you here instead. Use one or the other, not both.
+    -->
+
+  </main>
+</body>
+</html>
