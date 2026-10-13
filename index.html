@@ -1,148 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Security Notice</title>
-<!--
-  ============================================================
-  SIMULATED PHISHING — TRAINING EXERCISE ONLY
-  ============================================================
-  This page is part of a classroom threat-modelling activity.
-  It does NOT imitate any real organisation and collects no
-  personal data entered by the visitor. Its only job is to:
-    1. record that the link was clicked (via the tracker below), and
-    2. reveal to the visitor that they clicked a simulated phish.
-
-  ------------------------------------------------------------
-  STUDENT: FILL IN THESE THREE THINGS
-  ------------------------------------------------------------
-  1. YOUR NAME / TOKEN LABEL  -> search for "STUDENT-NAME" below
-  2. YOUR CANARYTOKEN URL     -> search for "PASTE-TOKEN-HERE" below
-  3. YOUR "RED FLAGS" list    -> edit the <li> items near the bottom
-  ============================================================
--->
-<style>
-  :root {
-    --bg: #0f1419;
-    --card: #1a2029;
-    --ink: #e8edf2;
-    --muted: #9aa7b4;
-    --accent: #ffb020;    /* warning amber, not a brand colour */
-    --line: #2a333f;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.6;
-    display: flex;
-    justify-content: center;
-    padding: 24px 16px;
-  }
-  .card {
-    width: 100%;
-    max-width: 620px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 32px 28px;
-  }
-  .badge {
-    display: inline-block;
-    background: var(--accent);
-    color: #241a00;
-    font-weight: 700;
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 5px 11px;
-    border-radius: 999px;
-    margin-bottom: 20px;
-  }
-  h1 { font-size: 1.6rem; margin: 0 0 12px; }
-  h2 { font-size: 1.05rem; margin: 28px 0 10px; color: var(--accent); }
-  p  { margin: 0 0 14px; color: var(--ink); }
-  .muted { color: var(--muted); font-size: 0.92rem; }
-  ul { margin: 0 0 14px; padding-left: 20px; }
-  li { margin-bottom: 8px; }
-  .divider { height: 1px; background: var(--line); margin: 26px 0; border: 0; }
-  .footer { font-size: 0.82rem; color: var(--muted); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ Phishing Alert - You Could Have Been Hacked!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .warning-icon {
+            font-size: 72px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            color: #d9534f;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .info-section {
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: #d9534f;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            font-size: 22px;
+        }
+        ul {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight-box {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #d9534f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #c9302c;
+        }
+        .tips {
+            background-color: #e9f7ef;
+            border-left: 4px solid #2ecc71;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .scenario-box {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .red-text {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <main class="card">
+    <div class="container">
+        <div class="header">
+            <div class="warning-icon">⚠️</div>
+            <h1>PHISHING SIMULATION ALERT</h1>
+            <div class="subtitle">You clicked on a suspicious link that could have compromised your account</div>
+        </div>
 
-    <span class="badge">⚠ Simulated phishing — training exercise</span>
+        <div class="highlight-box">
+            <strong>Don't worry!</strong> This was a simulated phishing test to help teach you about online safety. No harm was done to your device or account, but in a real situation, clicking this link could have:
+            <ul>
+                <li>Stolen your personal information</li>
+                <li>Installed malware on your device</li>
+                <li>Compromised your school account</li>
+                <li>Put your identity at risk</li>
+            </ul>
+        </div>
 
-    <h1>Gotcha. This was a fake.</h1>
+        <div class="info-section">
+            <h2>What Is Phishing?</h2>
+            <p>Phishing is when cybercriminals use fake emails, text messages, or websites that look legitimate to trick you into:</p>
+            <ul>
+                <li>Revealing personal information like passwords or credit card details</li>
+                <li>Clicking dangerous links that install malware</li>
+                <li>Downloading harmful attachments</li>
+                <li>Sending money or gift cards to scammers</li>
+            </ul>
+        </div>
 
-    <p>
-      You just clicked a link in a <strong>simulated phishing email</strong> created
-      for a school cybersecurity lesson. Nothing bad has happened — but if this had
-      been a real attack, clicking could have been the first step to a compromised
-      account.
-    </p>
+        <div class="scenario-box">
+            <h3>The Link You Clicked</h3>
+            <p>You were directed to this page after clicking a simulated phishing link that contained several red flags, such as:</p>
+            <ul>
+                <li>An urgent request claiming your account needed attention</li>
+                <li>Spelling or grammar errors in the message</li>
+                <li>A suspicious URL that didn't match the official website</li>
+                <li>A generic greeting instead of your actual name</li>
+            </ul>
+        </div>
 
-    <p class="muted">
-      Simulated attack by: <strong>STUDENT-NAME</strong>
-    </p>
+        <div class="info-section">
+            <h2>How to Protect Yourself</h2>
+            <div class="tips">
+                <p><strong>Remember these tips to stay safe online:</strong></p>
+                <ul>
+                    <li><span class="red-text">Think before you click!</span> Carefully check links before clicking, especially in unexpected messages</li>
+                    <li>Hover over links to see the actual URL destination before clicking</li>
+                    <li>Look for spelling errors, unusual sender addresses, or strange formatting</li>
+                    <li>Never provide personal information in response to an email or text</li>
+                    <li>Use multi-factor authentication when available</li>
+                    <li>Report suspicious messages to your school IT department</li>
+                    <li>If you're not sure, ask a teacher or IT staff for help</li>
+                </ul>
+            </div>
+        </div>
 
-    <hr class="divider">
+        <div class="info-section">
+            <h2>Common Phishing Tactics Targeting Students</h2>
+            <ul>
+                <li><strong>Grade scams:</strong> "Click here to view your updated grades"</li>
+                <li><strong>Account verification:</strong> "Your student account will be deleted unless you verify now"</li>
+                <li><strong>Financial aid:</strong> "You've qualified for a special scholarship - claim now"</li>
+                <li><strong>Password reset:</strong> "Your school password has expired - update immediately"</li>
+                <li><strong>Free stuff:</strong> "Claim your free laptop/gift card/discount as a student"</li>
+            </ul>
+        </div>
 
-    <h2>What gave it away?</h2>
-    <!-- STUDENT: edit these to match the specific lure email you wrote. -->
-    <ul>
-      <li>The sender's address didn't match the real organisation's domain.</li>
-      <li>It created false urgency ("your account will be closed in 24 hours").</li>
-      <li>The link text and the actual destination were different.</li>
-      <li>It asked you to log in or confirm details via a link, not the real site.</li>
-    </ul>
+        <div class="highlight-box">
+            <p><strong>Remember:</strong> Your school will never ask for your password via email or text messages. Always go directly to the official school website by typing the address in your browser.</p>
+        </div>
 
-    <h2>What to do with a real one</h2>
-    <ul>
-      <li>Don't click. Hover first and check where the link actually goes.</li>
-      <li>Go to the real site directly instead of using the email's link.</li>
-      <li>Report it to your IT team or use the "report phishing" button.</li>
-    </ul>
-
-    <hr class="divider">
-
-    <p class="footer">
-      This page is a classroom training exercise and is not affiliated with any
-      real company. It records only that the link was opened (time, approximate
-      IP, and browser type) for the lesson debrief.
-    </p>
-
-    <!--
-      ============================================================
-      THE TRACKER  (this is the part that records the click)
-      ============================================================
-      1. Go to canarytokens.org
-      2. Choose the token type "Web bug / URL token"
-      3. Enter YOUR email + a note (e.g. your name) and create it
-      4. Copy the image URL it gives you
-      5. Paste that URL in place of PASTE-TOKEN-HERE below
-
-      The image is invisible (1x1). When this page loads, the
-      browser fetches it, and Canarytokens logs the time, IP and
-      user-agent — and emails you if you enabled alerts.
-    -->
-    <img src="PASTE-TOKEN-HERE"
-         alt=""
-         width="1" height="1"
-         style="position:absolute; left:-9999px;"
-         aria-hidden="true">
-
-    <!--
-      ALTERNATIVE TRACKER (GoatCounter) — if you'd rather have a
-      counts dashboard than per-click emails, delete the <img> above,
-      sign up at goatcounter.com, and paste the script tag it gives
-      you here instead. Use one or the other, not both.
-    -->
-
-  </main>
+        <div class="footer">
+            <p>This phishing simulation was conducted as part of your school's cybersecurity awareness program. If you have questions, please contact your IT department.</p>
+            <button class="btn" onclick="window.close()">I Understand - Close This Window</button>
+        </div>
+    </div>
 </body>
 </html>
